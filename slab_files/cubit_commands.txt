@@ -1,0 +1,10 @@
+import facets “facet.fac” merge stitch feature_angle 0
+%surface 1 size auto factor 4
+surface 1 size 10
+surface 1 scheme trimesh
+trimesher geometry sizing on
+mesh surface 1 
+disassociate mesh surface 1
+delete volume all
+create mesh geometry tri all 
+export facets ‘tmp_facets.fac’ overwrite 
